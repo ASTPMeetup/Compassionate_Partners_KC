@@ -16,14 +16,14 @@ const styles = {
     menuButton: {
         marginLeft: -12,
         marginRight: 20,
-    },
+    }
 };
 
 class NavBar extends Component {
     render() {
         return (
             <div className={styles.root}>
-                <AppBar position="sticky">
+                <AppBar position="fixed" color="default">
                     <Toolbar>
                         <Grid container spacing={24} justify="flex-end">
                             <Button color="inherit">Donate</Button>

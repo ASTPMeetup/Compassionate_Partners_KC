@@ -4,16 +4,22 @@ import Grid from '@material-ui/core/Grid';
 
 const styles = {
   Paper: {padding: 25, marginTop: 20, marginBottom: 20},
-  Text: {fontSize: "2vw", textAlign: "center"}
+  Title: {fontSize: "2vw"},
+  Text: {fontSize: "1vw"}
 }
 
-class TextCenterContainer extends Component {
+class TextListContainer extends Component {
     render() {
         return (
             <Grid container spacing={24}>
                 <Grid item xs>
                     <Paper style={styles.Paper}>
-                        <p style={styles.Text}>{this.props.text}</p>
+                        <h1 style={styles.Title}>{this.props.title}</h1>
+                        <ul>
+                            {this.props.list.map((text, index) => {
+                                return <li style={styles.Text} key={index}>{text}</li>
+                            })}
+                        </ul>
                     </Paper>
                 </Grid>
             </Grid>
@@ -21,4 +27,4 @@ class TextCenterContainer extends Component {
     }
 }
 
-export default TextCenterContainer;
+export default TextListContainer;

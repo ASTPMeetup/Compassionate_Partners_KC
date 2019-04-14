@@ -10,12 +10,12 @@ class MultiGridContainer extends Component {
     render() {
         return (
             <Grid container spacing={24}>
-                <Grid item sm>
+                <Grid item xs>
                     <Paper style={styles.Paper}>
                         {this.props.description}
                     </Paper>
                 </Grid>
-                <Grid item sm>
+                <Grid item xs>
                     <Paper style={styles.Paper}>
                     Right Panel
                     </Paper>

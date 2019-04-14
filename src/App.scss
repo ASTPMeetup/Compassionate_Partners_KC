@@ -1,6 +1,58 @@
 body {
-  background: #eeeeee;
+  font-family: 'Lato', sans-serif;
+  background-color: #ccc8c0;
+  background-image: url(http://www.transparenttextures.com/patterns/sandpaper.png); 
+  .nav-bar {
+    background-color: pink;
+  }
   .page-wrapper {
     padding: 0 2vw;
+    &#home-page-wrapper {
+      margin-top: -10vw;
+    }
   }
+  .image-container {
+    &.overlay {
+      &:before {
+        background-image: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%);
+      }
+    }
+  }
+  .logo {
+    max-height: 275px;
+    padding: 12px;
+  }
+  .text-center {
+    text-align: center;
+    h2 {
+      margin-bottom: 0;
+      margin-top: 20px;
+    }
+  }
+  .image-wrapper {
+    padding-right: 3vw;
+    img {
+      width: 100%;
+    }
+  }
+  .hr-wrapper {
+    margin: 2vw;
+  }
+  //   #gradient2 {
+  //     position: absolute;
+  //     z-index:2;
+  //     right: 0;
+  //     bottom: 0;
+  //     left: 0;
+  //     height: 575px;
+  //     top: 40px;
+  //     background: none;
+  //     background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%);
+  //     background: -webkit-gradient(linear, left top, left right, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,1)));
+  //     background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%);
+  //     background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%);
+  //     background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%);
+  //     background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%);
+  //     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+  // }
 }
