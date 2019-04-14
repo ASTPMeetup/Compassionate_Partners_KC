@@ -6,9 +6,28 @@ import HomePage from './HomePage';
 import DonatePage from './DonatePage';
 import WhatWeDoPage from './WhatWeDoPage';
 import WhyWeDoPage from './WhyWeDoPage';
+
 import './App.scss';
+import Footer from './components/Footer';
+
+import { getStats } from './helpers/api';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      project: {}
+    };
+  }
+  componentDidMount() {
+    const stats = getStats();
+    stats.then(data => {
+      console.log(data);
+      this.setState(() => ({
+        project: data
+      }));
+    });
+  }
   render() {
     return (
       <div className="App">
