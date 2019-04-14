@@ -5,6 +5,8 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import Link from '@material-ui/core/Link';
 
+import Parser from '../helpers/Parser';
+
 const footerStyle = {
   backgroundColor: 'secondary'
 };
@@ -26,7 +28,11 @@ export default function Footer() {
       </Card>
       <Card>
         <CardHeader title="Social Media" />
-        <CardContent>This will be a row of icons</CardContent>
+        <CardContent>
+          <Parser
+            rawText={`<p>This is a complicated page with a <a href="http://www.google.com">link</a> in the middle.</p>`}
+          />
+        </CardContent>
       </Card>
       <Card>
         <CardHeader title="Contact Us" />

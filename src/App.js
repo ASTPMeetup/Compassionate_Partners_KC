@@ -18,6 +18,9 @@ import Divider from '@material-ui/core/Divider';
 import 'typeface-roboto';
 import './App.scss';
 
+import './components/Footer';
+import Footer from './components/Footer';
+
 const styles = {
   Grid: { marginTop: 5, marginBottom: 20 },
   Paper: { padding: 25, marginTop: 20, marginBottom: 20 }

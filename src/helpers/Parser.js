@@ -43,19 +43,23 @@ export default class Parser extends Component {
   }
 
   p(el) {
+    // console.log(this.$(el));
     console.log(this.$(el));
-    console.log(this.$(el).children('a').length);
+    console.log(this.$(el).contents().length);
 
+    // let parsedStr = '';
     const comps = [];
 
     this.$(el)
-      .children()
+      .contents()
       .each((i, child) => {
-        if (this.$(child).name === 'a') return comps.push(this.a(child));
-
+        console.log(child.name);
+        if (child.name) return comps.push(this.a(child));
+        console.log(this.$(child).text());
         comps.push(this.$(child).text());
       });
 
+    console.log(comps);
     return comps;
   }
 
