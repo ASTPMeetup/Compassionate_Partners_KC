@@ -17,6 +17,9 @@ import CelebrationBox from './assets/img/celebration_box.png';
 import Divider from '@material-ui/core/Divider';
 import 'typeface-roboto';
 import './App.scss';
+import Footer from './components/Footer';
+
+import { getStats } from './helpers/api';
 
 const styles = {
   Grid: { marginTop: 5, marginBottom: 20 },
@@ -31,15 +34,14 @@ class App extends Component {
     };
   }
   componentDidMount() {
-    let projectUrl = 'http://s734634495.onlinehome.us/wp-json/wp/v2/posts';
-    fetch(projectUrl)
-      .then(response => response.json())
-      .then(response => {
-        console.log(response, response[0].content);
-        this.setState({
-          project: response[0].content.rendered
-        });
-      });
+    const stats = getStats();
+    console.log(stats);
+    stats.then(data => {
+      console.log(data);
+      this.setState(() => ({
+        project: data
+      }));
+    });
   }
 
   render() {
