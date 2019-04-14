@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import NavBar from './components/NavBar';
 import MultiGridContainer from './components/containers/MultiGridContainer';
 import TextCenterContainer from './components/containers/TextCenterContainer';
 import ImageBannerContainer from './components/containers/ImageBannerContainer';
@@ -48,7 +47,6 @@ class HomePage extends Component {
   render() {
     return (
       <div className="home-page-container">
-        <NavBar/>
         <ImageBannerContainer/>
         <div class="page-wrapper" id="home-page-wrapper">
           <TextCenterContainer text="We build resilience in children and youth experiencing adversity and trauma."/>

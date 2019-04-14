@@ -9,7 +9,7 @@ const styles = {
   Video: {
       position: "relative",
       height: 0,
-      paddingBottom: "56.25%"
+      paddingBottom: "60.25%"
   },
   iFrame: {
       position:"absolute",

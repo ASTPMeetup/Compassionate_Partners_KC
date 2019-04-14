@@ -6,6 +6,7 @@ import HomePage from './HomePage';
 import DonatePage from './DonatePage';
 import WhatWeDoPage from './WhatWeDoPage';
 import WhyWeDoPage from './WhyWeDoPage';
+import FooterBar from './components/FooterBar';
 
 import './App.scss';
 import Footer from './components/Footer';
@@ -39,6 +40,8 @@ class App extends Component {
           <Route path="/why_we_do" component={WhyWeDoPage} />
           <Route path="/donate" component={DonatePage} />
         </Switch>
+        <br/>
+        <FooterBar/>
       </div>
     );
   }
