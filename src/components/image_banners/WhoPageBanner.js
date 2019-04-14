@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
-import BackgroundImage from '../../assets/img/awards.jpg';
+import BackgroundImage from '../../assets/img/who_we_are.png';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = {

@@ -14,9 +14,11 @@ const styles = {
         marginBottom: 20 
     },
     Header: {
-        textAlign: "center",
-        padding: "100px 100px 0px 100px",
-        fontSize: "8vw"
+        textAlign: "center"
+    },
+    HeaderText: {
+        padding: "100px 100px 25px 100px",
+        fontSize: "7.5vw"
     },
     image: {
         backgroundImage:`url(${BackgroundImage})`
@@ -44,7 +46,7 @@ const ImageBannerContainer = (props) => {
                 <Paper style={styles.Paper}>
                     <section className="image-container overlay" style={styles.image}>
                     <Grid item xs style={styles.Header}>
-                        <div className="marker-text">
+                        <div className="marker-text" style={styles.HeaderText}>
                             <p>Compassionate Partners KC</p>
                         </div>
                         <Link to="why_we_do">
