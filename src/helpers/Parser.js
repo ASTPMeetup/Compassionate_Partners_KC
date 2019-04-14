@@ -91,7 +91,7 @@ export default class Parser extends Component {
 
     return (
       <Card className={styles.card}>
-        <CardMedia className={styles.media} image={img} title={alt} />
+        <CardMedia className={styles.media} image={src} title={alt} />
       </Card>
     );
   }
