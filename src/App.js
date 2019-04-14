@@ -4,33 +4,36 @@ import MultiGridContainer from './components/containers/MultiGridContainer';
 import TextCenterContainer from './components/containers/TextCenterContainer';
 import './App.scss';
 
+import Footer from './components/Footer';
+
 class App extends Component {
   constructor() {
     super();
-    this.state ={
+    this.state = {
       project: {}
-    }
+    };
   }
   componentDidMount() {
-    let projectUrl = "http://s734634495.onlinehome.us/wp-json";
+    let projectUrl = 'http://s734634495.onlinehome.us/wp-json';
     fetch(projectUrl)
-    .then(response => response.json())
-    .then(response => {
-      console.log(response);
-      this.setState({
-        project: response
-      })
-    })
+      .then(response => response.json())
+      .then(response => {
+        console.log(response);
+        this.setState({
+          project: response
+        });
+      });
   }
 
   render() {
     return (
       <div className="App">
-        <NavBar/>
+        <NavBar />
         <div class="page-wrapper">
-          <TextCenterContainer description="Hello world!"/>
-          <MultiGridContainer description="Container One"/>
+          <TextCenterContainer description="Hello world!" />
+          <MultiGridContainer description="Container One" />
         </div>
+        <Footer />
       </div>
     );
   }
