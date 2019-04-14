@@ -7,6 +7,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
+import Paper from '@material-ui/core/Paper';
 
 import cheerio from 'cheerio';
 
@@ -90,9 +91,7 @@ export default class Parser extends Component {
     console.log(src, alt);
 
     return (
-      <Card className={styles.card}>
-        <CardMedia className={styles.media} image={src} title={alt} />
-      </Card>
+      
     );
   }
 
