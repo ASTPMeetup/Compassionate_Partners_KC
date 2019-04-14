@@ -3,7 +3,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
 const styles = {
-  Paper: {padding: 25, marginTop: 20, marginBottom: 20},
+  Paper: {padding: 35, marginTop: 20, marginBottom: 20},
   Text: {fontSize: "2vw", textAlign: "center"}
 }
 
