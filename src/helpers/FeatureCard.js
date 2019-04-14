@@ -6,16 +6,19 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
+import GreenBrush from '../assets/img/brush.png';
+
 const styles = {
   card: {
     minWidth: 300
   },
   media: {
-    height: 150,
+    height: 200
   },
+  Brush: {backgroundImage:`url(${GreenBrush})`}
 };
 
-function MediaCard(props) {
+function FeatureCard(props) {
   const { classes} = props;
   return (
     <Card className={classes.card} raised={true}>
@@ -26,14 +29,20 @@ function MediaCard(props) {
           title={props.title}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {props.title}
-          </Typography>
-          <Typography component="p">{props.content}</Typography>
+            <div class="text-center">
+                <div class="brush brush-text" style={styles.Brush}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                        {props.title}
+                    </Typography>
+                </div>
+                <br/>
+                <br/>
+            </div>
+            <Typography component="p">{props.content}</Typography>
         </CardContent>
       </CardActionArea>
     </Card>
   );
 }
 
-export default withStyles(styles)(MediaCard);
+export default withStyles(styles)(FeatureCard);

@@ -19,4 +19,25 @@ const getPageData = function(pageNum) {
     });
 };
 
-export default getPageData;
+const getStats = async function() {
+  // axios
+  //   .get(`pages/5`)
+  //   .then(res => {
+  //     const [, boxes, cupcakes, packets] = /<p>BOXES=(\d+) CUPCAKES=(\d+) PACKETS=(\d+)<\/p>/.exec(
+  //       res.data.content.rendered
+  //     );
+  //     console.log(boxes, cupcakes, packets);
+  //     return { boxes, cupcakes, packets };
+  //   })
+  //   .catch(e => {
+  //     console.log(e);
+  //   });
+
+  const res = await axios.get('pages/5');
+  const [, boxes, cupcakes, packets] = /<p>BOXES=(\d+) CUPCAKES=(\d+) PACKETS=(\d+)<\/p>/.exec(
+    res.data.content.rendered
+  );
+  return { boxes, cupcakes, packets };
+};
+
+export { getPageData, getStats };
