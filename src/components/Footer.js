@@ -30,7 +30,7 @@ export default function Footer() {
         <CardHeader title="Social Media" />
         <CardContent>
           <Parser
-            rawText={`<p>This is a complicated page with a <a href="http://www.google.com">link</a> in the middle.</p>`}
+            rawText={`<p>This is a complicated page with a <a href="http://www.google.com">link</a> in the middle.</p><figure class="wp-block-image"><img src="https://via.placeholder.com/300" alt="alt text"/></figure>`}
           />
         </CardContent>
       </Card>
