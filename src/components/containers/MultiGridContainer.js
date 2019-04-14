@@ -15,16 +15,11 @@ class MultiGridContainer extends Component {
   render() {
     return (
       <Grid container spacing={24}>
-        <Grid item sm>
+        <Grid item xs>
           <Paper style={styles.Paper}>{this.props.description}</Paper>
         </Grid>
-        <Grid item sm>
-          <Paper style={styles.Paper}>
-            <p>Right Panel</p>
-            <Parser
-              rawText={`<p>This is a complicated page with a <a href="http://www.google.com">link</a> in the middle.</p>`}
-            />
-          </Paper>
+        <Grid item xs>
+          <Paper style={styles.Paper}>Right Panel</Paper>
         </Grid>
       </Grid>
     );
