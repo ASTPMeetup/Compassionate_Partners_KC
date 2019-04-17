@@ -26,17 +26,17 @@ class VideoContainer extends Component {
         return (
             <Paper style={styles.Paper}>
                 <Grid container spacing={24}>
-                    <Grid item xs={5}>
+                    <Grid item md={5} xs={12}>
                         <div className="video-text" style={styles.Text}>
                             <p>{this.props.text}</p>
                         </div>
                     </Grid>
-                    <Grid item xs={7}>
-                            <div>
-                                <div style={styles.Video}>
-                                    <iframe src={this.props.link} style={styles.iFrame} frameBorder="0" allowfullscreen></iframe>
-                                </div>
+                    <Grid item md={7} xs={12}>
+                        <div>
+                            <div style={styles.Video}>
+                                <iframe src={this.props.link} style={styles.iFrame} frameBorder="0" allowfullscreen></iframe>
                             </div>
+                        </div>
                     </Grid>
                 </Grid>
             </Paper>

@@ -47,7 +47,7 @@ const ImageBannerContainer = (props) => {
                     <section className="image-container overlay" style={styles.image}>
                     <Grid item xs style={styles.Header}>
                         <div className="marker-text" style={styles.HeaderText}>
-                            <p>Compassionate Partners KC</p>
+                            Compassionate Partners KC
                         </div>
                         <Link to="why_we_do">
                             <Button variant="contained" aria-label="Our Story"

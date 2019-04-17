@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MultiGridContainer from './components/containers/MultiGridContainer';
 import TextCenterContainer from './components/containers/TextCenterContainer';
 import ImageBannerContainer from './components/containers/ImageBannerContainer';
 import VideoContainer from './components/containers/VideoContainer';
@@ -9,13 +8,13 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
-import Logo from './assets/img/logo.png';
 import Cupcake from './assets/img/single_cupcake.jpg';
 import ComfortAndJoy from './assets/img/comfort_and_joy.png';
 import Awards from './assets/img/awards.jpg';
 import CelebrationBox from './assets/img/celebration_box.png';
 import BrushBlue from './assets/img/brush_blue.png';
-import BrushPink from './assets/img/brush_pink.png';
+
+import { getStats } from './helpers/api';
 
 import './App.scss';
 
@@ -28,20 +27,18 @@ const styles = {
 class HomePage extends Component {
   constructor() {
     super();
-    this.state ={
+    this.state = {
       project: {}
-    }
+    };
   }
+
   componentDidMount() {
-    let projectUrl = "http://s734634495.onlinehome.us/wp-json/wp/v2/posts";
-    fetch(projectUrl)
-    .then(response => response.json())
-    .then(response => {
-      console.log(response,response[0].content);
-      this.setState({
-        project: response[0].content.rendered
-      })
-    })
+    const stats = getStats();
+    stats.then(data => {
+      this.setState(() => ({
+        project: data
+      }));
+    });
   }
 
   render() {
@@ -72,14 +69,14 @@ class HomePage extends Component {
           </Grid>
           <Paper style={styles.Paper}>
             <Grid container>
-              <Grid item xs>
+              <Grid item md xs={12}>
                 <div class="image-wrapper">
                   <img src={Awards}/>
                 </div>
               </Grid>
-              <Grid item xs>
+              <Grid item md xs={12}>
                 <div class="brush brush-text" style={styles.Brush}>
-                  <Typography component="h2" variant="display1" gutterBottom>Recognition &amp; Acknowledgement for Compassionate Partners KC's Community Services</Typography>
+                <Typography gutterBottom variant="h5" component="h2">Recognition &amp; Acknowledgement for Compassionate Partners KC's Community Services</Typography>
                 </div>
                 <br/>
                 <br/>
