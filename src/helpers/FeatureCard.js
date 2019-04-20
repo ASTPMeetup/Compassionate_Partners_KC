@@ -29,8 +29,8 @@ function FeatureCard(props) {
           title={props.title}
         />
         <CardContent>
-            <div class="text-center">
-                <div class="brush brush-text" style={styles.Brush}>
+            <div className="text-center">
+                <div className="brush brush-text" style={styles.Brush}>
                     <Typography gutterBottom variant="h5" component="h2">
                         {props.title}
                     </Typography>

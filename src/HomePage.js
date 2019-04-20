@@ -13,6 +13,7 @@ import ComfortAndJoy from './assets/img/comfort_and_joy.png';
 import Awards from './assets/img/awards.jpg';
 import CelebrationBox from './assets/img/celebration_box.png';
 import BrushBlue from './assets/img/brush_blue.png';
+import BackgroundImage from './assets/img/hero.jpg';
 
 import { getStats } from './helpers/api';
 
@@ -21,7 +22,8 @@ import './App.scss';
 const styles = {
   Grid: {marginTop: 5, marginBottom: 20},
   Paper: {padding: 25, marginTop: 20, marginBottom: 20},
-  Brush: {backgroundImage:`url(${BrushBlue})`}
+  Brush: {backgroundImage:`url(${BrushBlue})`},
+  Background: {backgroundImage: `url(${BackgroundImage})`}
 }
 
 class HomePage extends Component {
@@ -44,13 +46,13 @@ class HomePage extends Component {
   render() {
     return (
       <div className="home-page-container">
-        <ImageBannerContainer/>
-        <div class="page-wrapper" id="home-page-wrapper">
+        <ImageBannerContainer BackgroundImage={styles.Background} Header="Compassionate Partners KC" displayOurStoryButton={true}/>
+        <div className="page-wrapper" id="home-page-wrapper">
           <TextCenterContainer text="We build resilience in children and youth experiencing adversity and trauma."/>
           <VideoContainer link="https://www.youtube.com/embed/NlDi1enLzbw" text="&quot;..Every message in here that you are loved and you're valued. It doesn't cost [much]&quot;"/>
-          <div class="text-center">
+          <div className="text-center">
             <br/>
-            <div class="brush brush-text" style={styles.Brush}>
+            <div className="brush brush-text" style={styles.Brush}>
                 <Typography component="h2" variant="display3">
                 How We Serve
                 </Typography>
@@ -70,21 +72,21 @@ class HomePage extends Component {
           <Paper style={styles.Paper}>
             <Grid container>
               <Grid item md xs={12}>
-                <div class="image-wrapper">
-                  <img src={Awards}/>
+                <div className="image-wrapper">
+                  <img src={Awards} alt="compassionate partners kc awards"/>
                 </div>
               </Grid>
               <Grid item md xs={12}>
-                <div class="brush brush-text" style={styles.Brush}>
+                <div className="brush brush-text" style={styles.Brush}>
                 <Typography gutterBottom variant="h5" component="h2">Recognition &amp; Acknowledgement for Compassionate Partners KC's Community Services</Typography>
                 </div>
                 <br/>
                 <br/>
-                <Typography component="h2" variant="display1" gutterBottom>2017</Typography>
+                <Typography component="h1" variant="display1" gutterBottom>2017</Typography>
                 <p>Rosalyn Brown &amp; Betty Taliaferro Service Award</p>
-                <Typography component="h2" variant="display1" gutterBottom>2018</Typography>
+                <Typography component="h1" variant="display1" gutterBottom>2018</Typography>
                 <p>Mary Ann Flunder/Castina Cooper Distinguished Service Award</p>
-                <Typography component="h2" variant="display1" gutterBottom>2019</Typography>
+                <Typography component="h1" variant="display1" gutterBottom>2019</Typography>
                 <p>Friends Of Yates 2019 Black Man of Distinction</p>
                 <p>Friends Of Yates 2019 Black Woman of Distinction</p>
               </Grid>

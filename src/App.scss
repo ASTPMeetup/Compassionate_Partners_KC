@@ -10,9 +10,7 @@ body {
   }
   .page-wrapper {
     padding: 0 2vw;
-    &#home-page-wrapper {
-      margin-top: -10vw;
-    }
+    margin-top: -100px;
   }
   .image-container {
     &.overlay {
@@ -63,6 +61,7 @@ body {
       h2 {
         color: white;
         font-family: 'Permanent Marker', cursive !important;
+        text-shadow: 2px 2px black;
       }
     }
   }
@@ -71,6 +70,30 @@ body {
     font-family: 'Permanent Marker', cursive;
     p {
       margin: -20px;
+    }
+  }
+
+  // mobile  width view
+  @media (max-width: 650px) {
+    .banner-container {
+      .image-container {
+        height: 375px;
+      }
+    }
+    .brush {
+      padding: 0;
+    }
+    .logo-wrapper {
+      display: none;
+    }
+  }
+
+  // xl width view
+  @media (min-width: 1440px) {
+    .banner-container {
+      button {
+        display: none;
+      }
     }
   }
 }

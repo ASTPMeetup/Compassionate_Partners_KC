@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const divStyle = {
   position: 'absolute',
@@ -22,17 +22,17 @@ export default function MailChimp() {
         method="post"
         id="mc-embedded-subscribe-form"
         name="mc-embedded-subscribe-form"
-        class="validate"
+        className="validate"
         target="_blank"
-        novalidate
+        noValidate
       >
         <div id="mc_embed_signup_scroll">
           <input
             style={styles.Input}
             type="email"
-            value=""
+            defaultValue=""
             name="EMAIL"
-            class="email"
+            className="email"
             id="mce-EMAIL"
             placeholder="email address"
             required
@@ -42,19 +42,19 @@ export default function MailChimp() {
             <input
               type="text"
               name="b_a239d4b05f1fb26556d1b4349_3166608bc7"
-              tabindex="-1"
-              value=""
+              tabIndex="-1"
+              defaultValue=""
             />
             >
           </div>
-          <div class="clear">
+          <div className="clear">
             <input
               style={styles.Input}
               type="submit"
               value="Join Mailing List"
               name="subscribe"
               id="mc-embedded-subscribe"
-              class="button"
+              className="button"
             />
           </div>
         </div>

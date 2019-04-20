@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 
 const styles = {
-  Paper: {padding: 25, marginTop: 20, marginBottom: 20},
-  Text: {padding: "3vw", fontFamily: "Permanent Marker, cursive", fontSize: "2.75vw"},
+  Paper: {
+      padding: 25,
+      marginTop: 20,
+      marginBottom: 20
+  },
+  Text: {
+      padding: "3vw",
+      fontFamily: "Permanent Marker, cursive",
+      fontSize: "32px"
+  },
   Video: {
       position: "relative",
       height: 0,
@@ -34,7 +41,7 @@ class VideoContainer extends Component {
                     <Grid item md={7} xs={12}>
                         <div>
                             <div style={styles.Video}>
-                                <iframe src={this.props.link} style={styles.iFrame} frameBorder="0" allowfullscreen></iframe>
+                                <iframe src={this.props.link} style={styles.iFrame} title={this.props.text} frameBorder="0" allowFullScreen></iframe>
                             </div>
                         </div>
                     </Grid>

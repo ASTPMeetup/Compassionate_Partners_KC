@@ -2,15 +2,13 @@ import React, { Component } from 'react';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
 
-import WhyPageBanner from './components/image_banners/WhyPageBanner';
+import ImageBannerContainer from './components/containers/ImageBannerContainer';
 import TextCenterContainer from './components/containers/TextCenterContainer';
-import SimpleValuesList from './components/containers/SimpleValuesList';
 import TextListContainer from './components/containers/TextListContainer';
 import VideoContainer from './components/containers/VideoContainer';
 
-import Volunteers from './assets/img/volunteers.JPG';
+import Background from './assets/img/single_cupcake.jpg';
 import BrushBlue from './assets/img/brush_blue.png';
 import TeddyBear from './assets/img/teddy.jpg';
 
@@ -31,14 +29,15 @@ const styles = {
     Grid: {marginTop: 5, marginBottom: 20},
     Paper: {padding: 25, marginTop: 20, marginBottom: 20, textAlign: "center"},
     Brush: {backgroundImage:`url(${BrushBlue})`},
-    Reference: {fontSize: "0.85vw", padding: "1vw"}
+    Reference: {fontSize: "12px", padding: "1vw"},
+    Background: {backgroundImage: `url(${Background})`}
 }
 
 class WhyWeDoPage extends Component {
   render() {
     return (
       <div className="who-page-container">
-        <WhyPageBanner/>
+        <ImageBannerContainer BackgroundImage={styles.Background} Header="Our Mission"/>
         <div class="page-wrapper" id="home-page-wrapper">
           <TextCenterContainer text="The focus of CPKC’s attention is directed towards the silent victims of domestic violence and homelessness, the children."/>
           <Paper style={styles.Paper}>
@@ -59,12 +58,12 @@ class WhyWeDoPage extends Component {
           <VideoContainer text="&quot;Childhood trauma isn’t something you just get over as you grow up&quot;" link="https://embed.ted.com/talks/nadine_burke_harris_how_childhood_trauma_affects_health_across_a_lifetime"/>
           <Paper style={styles.Paper}>
             <Grid container>
-                <Grid item xs>
+                <Grid item md xs={12}>
                     <div class="image-wrapper">
-                        <img src={TeddyBear}/>
+                        <img src={TeddyBear} alt="domestic violence"/>
                     </div>
                 </Grid>
-                <Grid item xs>
+                <Grid item md xs={12}>
                     <TextListContainer title="Domestic Violence Statistics" list={stats}/>
                     <p style={styles.Reference}><i> Reference: Capstone Presentation for the Grambling State University Symposium. Presented by Vonthisha Wiley, Thomika Andrews, Yolanda Adams, Caterra Brooms, and Tiffany Tolliver.</i></p>
                 </Grid>

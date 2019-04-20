@@ -63,8 +63,8 @@ class NavBarTabs extends Component {
               <Tab label="Why We Do" onClick={this.handleWhyTabClick}/>
               <Tab label="Donate" onClick={this.handleDonateTabClick}/>
             </Tabs>
-            <div class="logo-wrapper">
-              <img src={Logo} style={styles.logo}/>
+            <div className="logo-wrapper">
+              <img src={Logo} style={styles.logo} alt="logo"/>
             </div>
         </AppBar>
       </div>

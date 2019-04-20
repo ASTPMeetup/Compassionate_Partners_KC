@@ -1,36 +1,31 @@
-import React, { Component } from 'react';
-import Paper from '@material-ui/core/Paper';
+import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
 
 import FeatureCard from './helpers/FeatureCard';
-import WhatPageBanner from './components/image_banners/WhatPageBanner';
 import TextCenterContainer from './components/containers/TextCenterContainer';
+import ImageBannerContainer from './components/containers/ImageBannerContainer';
 
 import CelebrationBox from './assets/img/celebration_box.png';
-import Volunteers from './assets/img/volunteers.JPG';
 import BrushBlue from './assets/img/brush_pink.png';
-import Cupcake from './assets/img/single_cupcake.jpg';
 import SummerReading from './assets/img/summer_reading.png';
 import ThanksGiving from './assets/img/thanksgiving.png';
 import CookingClass from './assets/img/cooking_class.png';
 import ComfortAndJoy from './assets/img/comfort_and_joy.png';
 import MothersDay from './assets/img/mothers_day.png';
+import Background from  './assets/img/cupcakes.png';
 
 const styles = {
     Grid: {marginTop: 5, marginBottom: 20},
     Paper: {padding: 25, marginTop: 20, marginBottom: 20},
-    Brush: {backgroundImage:`url(${BrushBlue})`}
+    Brush: {backgroundImage:`url(${BrushBlue})`},
+    Background: {backgroundImage: `url(${Background})`}
 }
 
-class WhatWeDoPage extends Component {
-  render() {
-    return (
-      <div className="who-page-container">
-        <WhatPageBanner/>
+const WhatWeDoPage = () => (
+    <div className="who-page-container">
+        <ImageBannerContainer BackgroundImage={styles.Background} Header="What We Do"/>
         <div class="page-wrapper" id="home-page-wrapper">
-          <TextCenterContainer text="CPKC fosters collaborations with community partners to maximize positive impact with one goal in mind; to ensure that the children and youth who are experiencing trauma in our community can still become healthy productive adults. We are achieving this goal through resiliency building programs we call - Compassionate Projects"/>
+            <TextCenterContainer text="CPKC fosters collaborations with community partners to maximize positive impact with one goal in mind; to ensure that the children and youth who are experiencing trauma in our community can still become healthy productive adults. We are achieving this goal through resiliency building programs we call - Compassionate Projects"/>
             <Grid container spacing={24}>
                 <Grid item xs>
                     <FeatureCard title="Celebration Box" image={CelebrationBox} content="CPKC’s hallmark project - this project was created for children and youth in domestic violence shelters and transitional housing programs. The Celebration Box is an instant party in a box that’s delivered each month for birthday celebrations, holidays and special occasions. It contains colorful and festive decorations, cupcakes, treats bags, party favors, gifts and cards for the person(s) being celebrated."/>
@@ -56,8 +51,7 @@ class WhatWeDoPage extends Component {
                 </Grid>
             </Grid>
         </div>
-      </div>
-    );
-  }
-}
+    </div>
+);
+
 export default WhatWeDoPage;
