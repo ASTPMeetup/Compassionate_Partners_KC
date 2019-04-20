@@ -18,7 +18,7 @@ const styles = {
   Brush: {backgroundImage:`url(${GreenBrush})`}
 };
 
-function FeatureCard(props) {
+const FeatureCard = (props) => {
   const { classes} = props;
   return (
     <Card className={classes.card} raised={true}>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {withRouter, Link} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
@@ -67,11 +67,15 @@ class NavBarTabs extends Component {
     this.props.history.push('/donate');
   };
 
+  handleLogoClick = () => {
+    this.setState({ value: 0 });
+    this.props.history.push('/');
+  };
+
   render() {
     return (
       <div className={styles.root}>
         <AppBar position="fixed" color="default">
-          
             <Tabs value={this.state.value} onChange={this.handleChange} indicatorColor="primary"
               textColor="primary">
               <Tab label="Home" onClick={this.handleHomeClick}/>
@@ -80,10 +84,8 @@ class NavBarTabs extends Component {
               <Tab label="Why We Do" onClick={this.handleWhyTabClick}/>
               <Tab label="Donate" onClick={this.handleDonateTabClick}/>
             </Tabs>
-            <div className="logo-wrapper">
-              <Link to="/">
-                <img src={Logo} style={styles.logo} alt="logo"/>
-              </Link>
+            <div className="nav-icons-wrapper">
+              <img src={Logo} onClick={this.handleLogoClick} style={styles.logo} alt="logo"/>
               <a href="https://www.facebook.com/CPKC.LOVE" target="_blank" rel="noopener noreferrer">
                 <img src={FacebookIcon} style={styles.facebookIcon} alt="facebook logo"/>
               </a>

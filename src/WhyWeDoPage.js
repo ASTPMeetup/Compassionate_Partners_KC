@@ -45,7 +45,7 @@ class WhyWeDoPage extends Component {
                 <Grid item xs>
                     <div class="brush brush-text" style={styles.Brush}>
                         <Typography component="h2" variant="display3">
-                            Our Story
+                          Why We Do What We Do
                         </Typography>
                     </div>
                     <br/>

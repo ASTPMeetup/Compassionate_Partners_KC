@@ -9,11 +9,12 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
 import Cupcake from './assets/img/single_cupcake.jpg';
-import ComfortAndJoy from './assets/img/comfort_and_joy.png';
+import SummerReading from './assets/img/summer_reading.png';
 import Awards from './assets/img/awards.jpg';
 import CelebrationBox from './assets/img/celebration_box.png';
 import BrushBlue from './assets/img/brush_blue.png';
 import BackgroundImage from './assets/img/hero.jpg';
+import YatesLogo from './assets/img/Friends_of_Yates_Logo.png';
 
 import { getStats } from './helpers/api';
 
@@ -23,7 +24,9 @@ const styles = {
   Grid: {marginTop: 5, marginBottom: 20},
   Paper: {padding: 25, marginTop: 20, marginBottom: 20},
   Brush: {backgroundImage:`url(${BrushBlue})`},
-  Background: {backgroundImage: `url(${BackgroundImage})`}
+  Background: {backgroundImage: `url(${BackgroundImage})`},
+  YatesLogo: {maxHeight: "30px"},
+  YatesText: {position: "relative", top: "-20px", left: "10px"}
 }
 
 class HomePage extends Component {
@@ -48,7 +51,7 @@ class HomePage extends Component {
       <div className="home-page-container">
         <ImageBannerContainer BackgroundImage={styles.Background} Header="Compassionate Partners KC" displayOurStoryButton={true}/>
         <div className="page-wrapper" id="home-page-wrapper">
-          <TextCenterContainer text="We build resilience in children and youth experiencing adversity and trauma."/>
+          <TextCenterContainer text="We strive to inspire hope into the hearts of our most valuable resource, our children."/>
           <VideoContainer link="https://www.youtube.com/embed/NlDi1enLzbw" text="&quot;..Every message in here that you are loved and you're valued. It doesn't cost [much]&quot;"/>
           <div className="text-center">
             <br/>
@@ -60,13 +63,13 @@ class HomePage extends Component {
           </div>
           <Grid container spacing={40} style={styles.Grid}>
             <Grid item xs>
-              <FeatureCard title="Celebration Boxes" image={CelebrationBox} content="We've donated over 500 Celebration Boxes to children and youth in domestic violence shelters and transitional housing programs."/>
+              <FeatureCard title="Celebration Boxes" image={CelebrationBox} content="We've shared the Celebration Box with over 500 children in domestic violence shelters and transitional housing programs to celebrate birthdays, holidays and special occasions."/>
             </Grid>
             <Grid item xs>
-              <FeatureCard title="Birthday Cupcakes" image={Cupcake} content="We've given over 740 cupcakes to needy children in the Kansas City community"/>
+              <FeatureCard title="Summer Reading Program" image={SummerReading} content="We've given over 250 books to children in hopes of preventing summer learning loss, improving reading proficiency and entertainment through the magic that only reading provides."/>
             </Grid>
             <Grid item xs>
-              <FeatureCard title="Comfort &amp; Joy Packs" image={ComfortAndJoy} content="Last Christmas, we create Comfort &amp; Joy packs with 31 children at Joyce Williams Domestic Violence Shelter."/>
+              <FeatureCard title="Celebration Cupcakes" image={Cupcake} content="We've provided over 740 cupcakes and cookies for celebrations that allow youth to rise above their difficult circumstances to enjoy being a kid for a day."/>
             </Grid>
           </Grid>
           <Paper style={styles.Paper}>
@@ -84,11 +87,18 @@ class HomePage extends Component {
                 <br/>
                 <Typography component="h1" variant="display1" gutterBottom>2017</Typography>
                 <p>Rosalyn Brown &amp; Betty Taliaferro Service Award</p>
+                <p>Letter Of Appreciation From Hillcrest Transitional Housing</p>
                 <Typography component="h1" variant="display1" gutterBottom>2018</Typography>
                 <p>Mary Ann Flunder/Castina Cooper Distinguished Service Award</p>
                 <Typography component="h1" variant="display1" gutterBottom>2019</Typography>
-                <p>Friends Of Yates 2019 Black Man of Distinction</p>
-                <p>Friends Of Yates 2019 Black Woman of Distinction</p>
+                <p>
+                  <span><img src={YatesLogo} style={styles.YatesLogo} className="yates-logo" alt="friends of yates logo"/></span>
+                  <span style={styles.YatesText}>Friends of Yates 2019 Black Man of Distinction</span>
+                </p>
+                <p>
+                  <span><img src={YatesLogo} style={styles.YatesLogo} className="yates-logo" alt="friends of yates logo"/></span>
+                  <span style={styles.YatesText}>Friends of Yates 2019 Black Woman of Distinction</span>
+                </p>
               </Grid>
             </Grid>
           </Paper>
