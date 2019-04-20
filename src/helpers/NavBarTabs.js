@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
-import {withRouter} from 'react-router-dom';
+import {withRouter, Link} from 'react-router-dom';
 
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+
 import Logo from '../assets/img/logo.png';
+import FacebookIcon from '../assets/img/facebook.svg';
+import InstagramIcon from '../assets/img/instagram.svg';
 
 const styles = {
   root: {
@@ -15,6 +18,20 @@ const styles = {
     maxHeight: "30px",
     right: "20px",
     top: "10px"
+  },
+  facebookIcon: {
+    position: "fixed",
+    maxHeight: "30px",
+    maxWidth: "26px",
+    right: "65px",
+    top: "12px"
+  },
+  instagramIcon: {
+    position: "fixed",
+    maxHeight: "26px",
+    maxWidth: "30px",
+    right: "105px",
+    top: "12px"
   }
 };
 
@@ -64,7 +81,15 @@ class NavBarTabs extends Component {
               <Tab label="Donate" onClick={this.handleDonateTabClick}/>
             </Tabs>
             <div className="logo-wrapper">
-              <img src={Logo} style={styles.logo} alt="logo"/>
+              <Link to="/">
+                <img src={Logo} style={styles.logo} alt="logo"/>
+              </Link>
+              <a href="https://www.facebook.com/CPKC.LOVE" target="_blank" rel="noopener noreferrer">
+                <img src={FacebookIcon} style={styles.facebookIcon} alt="facebook logo"/>
+              </a>
+              <a href="https://www.instagram.com/cpkc.love" target="_blank" rel="noopener noreferrer">
+                <img src={InstagramIcon} style={styles.instagramIcon} alt="instagram logo"/>
+              </a>
             </div>
         </AppBar>
       </div>
