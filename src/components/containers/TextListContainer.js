@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import BrushBlue from '../../assets/img/brush_blue.png';
 
 const styles = {
   Paper: {padding: 25, marginTop: 20, marginBottom: 20},
-  Text: {fontSize: "1.25vw", textAlign: "left", paddingBottom: "0.75vw"},
+  Text: {fontSize: "16px", textAlign: "left", paddingBottom: "0.75vw"},
   Brush: {backgroundImage:`url(${BrushBlue})`}
 }
 
