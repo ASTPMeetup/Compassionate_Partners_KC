@@ -1,7 +1,7 @@
 import Axios from 'axios';
 
 const axios = Axios.create({
-  baseURL: 'http://cpkc.azurewebsites.net/wp-json/wp/v2/'
+  baseURL: 'http://api.compassionatepartnerskc.org/wp-json/wp/v2/'
 });
 
 const getPageData = function(pageNum) {
@@ -9,7 +9,7 @@ const getPageData = function(pageNum) {
     .get(`pages/${pageNum}`)
     .then(res => {
       // pull raw text from wordpress formatting
-      const [, body] = /<p>(.*)<\/p>/.exec(res.data.content.rendered);
+      const body = res.data.content.rendered;
       const title = res.data.title.rendered;
       // console.log({ title, body });
       return { title, body };

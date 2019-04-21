@@ -10,6 +10,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Paper from '@material-ui/core/Paper';
 
 import cheerio from 'cheerio';
+import { CardActionArea } from '@material-ui/core';
 
 export default class Parser extends Component {
   $ = cheerio.load(this.props.rawText);
@@ -89,10 +90,10 @@ export default class Parser extends Component {
     const src = this.$(img).attr('src');
     const alt = this.$(img).attr('alt');
     console.log(src, alt);
+    const { classes } = this.props;
+    console.log(JSON.stringify(this.props, null, 2));
 
-    return (
-      
-    );
+    return <img src={src} />;
   }
 
   render() {
