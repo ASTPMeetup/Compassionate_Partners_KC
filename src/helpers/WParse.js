@@ -2,10 +2,10 @@ import React from 'react';
 import cheerio from 'cheerio';
 import axios from 'axios';
 
-import A from './A';
-import P from './P';
-import LS from './LS';
-import IMG from './IMG';
+import A from './tags/A';
+import P from './tags/P';
+import LS from './tags/LS';
+import IMG from './tags/IMG';
 
 function WParse(props) {
   const { rawText } = props;
