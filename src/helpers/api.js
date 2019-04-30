@@ -1,7 +1,7 @@
 import Axios from 'axios';
 
 const axios = Axios.create({
-  baseURL: 'http://cpkc.azurewebsites.net/wp-json/wp/v2/'
+  baseURL: 'https://api.compassionatepartnerskc.org/wp-json/wp/v2/'
 });
 
 const getPageData = function(pageNum) {
@@ -32,8 +32,9 @@ const getStats = async function() {
   //   .catch(e => {
   //     console.log(e);
   //   });
-
-  const res = await axios.get('pages/5');
+  console.log('before');
+  const res = await axios.get('pages/9');
+  console.log('after');
   const [, boxes, cupcakes, packets] = /<p>BOXES=(\d+) CUPCAKES=(\d+) PACKETS=(\d+)<\/p>/.exec(
     res.data.content.rendered
   );
